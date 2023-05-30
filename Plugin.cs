@@ -33,7 +33,7 @@ namespace QuickLook.Plugin.DllViewer
 
         public bool CanHandle(string path)
         {
-            return !Directory.Exists(path) && (path.ToLower().EndsWith(".dll"));
+            return !Directory.Exists(path) && (path.ToLower().EndsWith(".dll")||path.ToLower().EndsWith(".exe"));
         }
 
         public void Prepare(string path, ContextObject context)
